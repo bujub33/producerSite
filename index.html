@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMPIRE</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e, #6a0572);
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+        .toggle-view {
+            margin: 10px 0;
+        }
+        .music-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+        .music-item {
+            background: #2c2c54;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .music-item audio {
+            width: 100%;
+        }
+        .grid-view {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+        .qr-code {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>MMPIRE</h1>
+        <h2>Over Everything</h2>
+        <button class="toggle-view" onclick="toggleView()">Toggle View</button>
+
+        <div id="musicContainer" class="music-list">
+
+            <div class="music-item">
+                <p>MMPIRE - Intro.mp3</p>
+                <p>Stan Grizz Adams & Tom Hew ft. Phreshman Rell</p>
+                <audio controls>
+                    <source src="https://drive.google.com/file/d/1DljqG2NfwBnBVyvDsNKCIidjHoysS-ye/view?usp=drivesdk" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <button>Buy Now</button>
+            </div>
+            <div class="music-item">
+                <p>Pennies.mp3</p>
+                <p>Nef</p>
+                <audio controls>
+                    <source src="https://drive.google.com/file/d/1VteGZg2OVsKiWQdZSxTWCr4qXSHN2HLH/view?usp=drivesdk" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <button>Buy Now</button>
+            </div>
+            <div class="music-item">
+                <p>Mission</p>
+                <p>Stan Grizz Adams</p>
+                <audio controls>
+                    <source src="https://drive.google.com/file/d/1DljqG2NfwBnBVyvDsNKCIidjHoysS-ye/view?usp=drivesdk" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <button>Buy Now</button>
+            </div>
+            <div class="music-item">
+                <p>Beautiful Soul.mp3</p>
+                <p>Shay Raysor</p>
+                <audio controls>
+                    <source src="https://drive.google.com/file/d/1e_kA72fyKIeCdNCPOM_PymPL-DMhuEPx/view?usp=drivesdk" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <button>Buy Now</button>
+            </div>
+            <div class="music-item">
+                <p>All Day All Night.mp3</p>
+                <p>Stan Grizz Adams & Tom Hew</p>
+                <audio controls>
+                    <source src="https://drive.google.com/file/d/1o8sS0pilCUQX8ycSApQXgnupmxYc2iQj/view?usp=drivesdk" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <button>Buy Now</button>
+            </div>
+            <div class="music-item">
+                <p>Proud of Me.mp3</p>
+                <p>Shay Raysor</p>
+                <audio controls>
+                    <source src="https://drive.google.com/file/d/1jmeJ-COnbxF5EMUnjl78w5xypMnyG-NC/view?usp=drivesdk" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <button>Buy Now</button>
+            </div>
+            
+        </div>
+        <div class="qr-code">
+            <p>Follow me on social media:</p>
+            <img src="qr-code.png" alt="Link to socials" width="150">
+        </div>
+    </div>
+    <script>
+        function toggleView() {
+            document.getElementById("musicContainer").classList.toggle("grid-view");
+        }
+    </script>
+</body>
+</html>
